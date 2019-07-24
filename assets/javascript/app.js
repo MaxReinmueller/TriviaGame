@@ -1,27 +1,45 @@
 // write a list of random trivia questions and store in an object array. use object for question, properties for possible answers.
 
+
+$(document).ready(function(){
+    $("#hiddenAtFirst").addClass("hidden")
+});
+
 // importanat variables
 var number = 10;
 var intervalId;
 
-//  onClick event to start the game
-    $("#start").on("click", start)
+//  onClick event to start the game and executes run function
+    $('#start').on("click", run)
+
 
 // sets an interval for the time
 function run() {
     clearInterval(intervalId);
     intervalId = setInterval(decrement, 1000);
+    // hides button
+    $(this).hide();
+    // displays question div
+    $("#hiddenAtFirst").show();
 }
 
+// decreases the timer and updates html
 function decrement() {
     number--;
-    $("#countdown").html("<h2>" + number + "</h2>")
+    $("#countdown").html("<h2>" + number + "</h2>");
 
     if (number === 0) {
         stop();
-        console.log("show answer")
+        console.log("show answer");
     }
 }
+
+function stop() {
+    clearInterval(intervalId);
+}
+
+
+
 
 // timer starts counting down
 
