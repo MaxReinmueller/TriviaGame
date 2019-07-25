@@ -11,38 +11,32 @@
 </head>
 
 <body>
-    <!-- Psudo code 
-    - make sections in html use css to style
--->
-    <div class="container">
-        <h1>Totally Trivial Trivia!!</h1>
-
-        <!-- question  -->
-        <div id="quiz" style="display: none">
+   
+<div class="container">
+    <h1>Totally Trivial Trivia!!</h1>
+    <div id="theQuiz">
+        <button id="startQuiz">Start Quiz</button>
+    
+        <div id="quiz">
             <div id="question"></div>
             <div id="choices">
-                <div class="choice" id="A" onclick="checkAnswer('A')"></div>
-                <div class="choice" id="B" onclick="checkAnswer('B')"></div>
-                <div class="choice" id="C" onclick="checkAnswer('C')"></div>
-                <div class="choice" id="D" onclick="checkAnswer('D')"></div>
+                <div class="choice" id="A"></div>
+                <div class="choice" id="B"></div>
+                <div class="choice" id="C"></div>
+                <div class="choice" id="D"></div>
                 </div>
-            <button id="submit">Submit</button>
             
         </div>
-
+        <div id="progress"></div>
+    </div>
         <!-- timer -->
-        <button id="start">Start</button>
         <div id="countdown"></div>
 
         <!-- score -->
-        <div id="results" style="display: none"></div>
-
-
-
-        <script src="https://code.jquery.com/jquery-3.4.1.js"
-            integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
-        </script>
-        <script src="assets/javascript/app.js"></script>
+        <div id="scoreContainer" style="display: none"></div>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="assets/javascript/app.js"></script>
 </body>
 
 </html>

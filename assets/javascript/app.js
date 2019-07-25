@@ -2,10 +2,7 @@
 var start = $('#start');
 var quiz = $('#quiz');
 var question = $('#question')
-var choiceA = $('#A')
-var choiceB = $('#B')
-var choiceC = $('#C')
-var choiceD = $('#D')
+
 
 // List of questions
 var questions = [
@@ -51,19 +48,59 @@ var questions = [
 },
 ];
 
+var lastQuestion = questions.length - 1;
+var runningQuestions = 0;
+
+function renderQuestion() {
+    var q = questions[runningQuestions];
+
+    $("#question").html("<h3>" + q.question + "</h3>")
+    $("#A").html("<p>" + q.choiceA + "</p>");
+    $("#B").html("<p>" + q.choiceB + "</p>");
+    $("#C").html("<p>" + q.choiceC+ "</p>");
+    $("#D").html("<p>" + q.choiceD + "</p>");
+}
+
+
+function renderProgress(){
+    for (qIndex = 0; qIndex <= lastQuestion; qIndex++){
+    $("#progress").html("<div class='prog' id="+ qIndex +"></div>");
+    }
+}
+
+
 // variables for timer
-var number = 10;
+var number = 20;
 var intervalId;
 
-//  Starts the timer
-$('#start').on("click", run)
 
-// sets an interval for the time
-function run() {
+$("#startQuiz").on("click", theQuiz)
+
+function theQuiz() {
+    renderQuestion();
+    renderProgress();
+    timer()
+    $(this).hide();
+}
+
+
+function checkBoxes() {
+    var box = $("<button>");
+    box.addClass("checkbox")
+    box.text("✓")
+}
+
+
+
+
+
+
+// Timer
+function timer() {
     clearInterval(intervalId);
     intervalId = setInterval(decrement, 1000);
-    $(this).hide();
-    $("#hiddenAtFirst").show();
+    $(this).hide();   
+   
 }
 
 // decreases the timer and updates html
