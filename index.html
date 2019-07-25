@@ -11,29 +11,19 @@
 </head>
 
 <body>
-   
-<div class="container">
-    <h1>Totally Trivial Trivia!!</h1>
-    <div id="theQuiz">
-        <button id="startQuiz">Start Quiz</button>
-    
-        <div id="quiz">
-            <div id="question"></div>
-            <div id="choices">
-                <div class="choice" id="A"></div>
-                <div class="choice" id="B"></div>
-                <div class="choice" id="C"></div>
-                <div class="choice" id="D"></div>
-                </div>
-            
-        </div>
-        <div id="progress"></div>
-    </div>
-        <!-- timer -->
-        <div id="countdown"></div>
 
-        <!-- score -->
-        <div id="scoreContainer" style="display: none"></div>
+    <div class="container">
+        <h1>Totally Trivial Trivia!!</h1>
+        <form id="quiz" name="quiz" style="display: none">
+        <P>In the year 1900 in the U.S. what were the most popular first names given to boy and girl babies?</P>
+        <input type="radio" id="q1.1" name="question1" value="William and Elizabeth">A. William and Elizabeth</input><br>
+        <input type="radio" id="q1.2" name="question1" value="Joseph and Catherine">B. Joseph and Catherine</input><br>
+        <input type="radio" id="q1.3" name="question1" value="John and Mary">C. John and Mary</input><br>
+        <input type="radio" id="q1.4" name="question1" value="George and Anne">D. George and Anne</input><br>
+        <button type="submit" value="I'm Finished!" onclick="check();">Submit</button>
+        </form>
+        <button id="startQuiz">Start!</button>
+        <div id="countdown"></div>
     </div>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="assets/javascript/app.js"></script>
