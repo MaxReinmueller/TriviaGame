@@ -172,3 +172,52 @@ HTML
 
         <!-- score -->
         <div id="scoreContainer"></div>
+
+
+
+        QUESTIONS
+        var questions = [{
+        question:"In the year 1900 in the U.S. what were the most popular first names given to boy and girl babies?",
+        choiceA:'William and Elizabeth',
+        choiceB:'Joseph and Catherine',
+        choiceC:'John and Mary',
+        choiceD:'George and Anne',
+        correct:'choiceC',
+    },
+    {
+        question:"When did the Liberty Bell get its name?",
+        choiceA:'when it was made, in 1701',
+        choiceB:'when it rang on July 4, 1776',
+        choiceC:'in the 19th century, when it became a symbol of the abolition of slavery',
+        choiceD:'none of the above',
+        correct:'choiceC',
+    },
+    {
+        question:"In the Roy Rogers -Dale Evans Museum, you will find Roy and Dales stuffed horses. Roy's horse was named Trigger, which was Dales horse?",
+        choiceA:'Buttermilk',
+        choiceB:'Daisy',
+        choiceC:'Scout',
+        choiceD:'Tulip',
+        correct:'choiceA',
+    },
+    {
+        question:"Which of the following items was owned by the fewest U.S. homes in 1990?",
+
+        choiceA:'home computer',
+        choiceB:'compact disk player',
+        choiceC:'cordless phone',
+        choiceD:'dishwasher',
+
+        correct:'choiceB',
+    },
+    {
+        question:"Who holds the record for the most victories in a row on the professional golf tour?",
+
+        choiceA:'Jack Nicklaus',
+        choiceB:'Arnold Palmer',
+        choiceC:'Byron Nelson',
+        choiceD:'Ben Hogan',
+
+        correct:'choiceC',
+    },
+];

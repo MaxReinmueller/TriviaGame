@@ -2,7 +2,7 @@ function check() {
 var question1 = $("input[type=radio][name=question1]:checked" ).val();
 
 if (question1 == "John and Mary") {
-    alert("correct!")
+    alert("YOUR AWESOME!!!")
 }else {
     alert('wrong!')
 }
@@ -34,6 +34,7 @@ function decrement() {
 
     if (number === 0) {
         stop();
+        alert("Times Up!")
     }
 }
 
